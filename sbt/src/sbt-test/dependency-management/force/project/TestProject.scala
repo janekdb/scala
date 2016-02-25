@@ -21,6 +21,6 @@ object TestProject extends Build
 				case f if f.getName contains "log4j-" => f.getName
 			}
 			if (log4j.size != 1 || !log4j.head.contains(ver))
-  			error("Did not download the correct jar.")
+				sys.error("Did not download the correct jar.")
 		}
 }
