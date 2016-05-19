@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.0-20160517-210702-9eaecc4a4c - scala.collection.immutable.ListSet</title>
-          <meta name="description" content="Scala Standard Library 2.12.0 - 20160517 - 210702 - 9eaecc4a4c - scala.collection.immutable.ListSet" />
-          <meta name="keywords" content="Scala Standard Library 2.12.0 20160517 210702 9eaecc4a4c scala.collection.immutable.ListSet" />
+          <title>Scala Standard Library 2.12.0-20160519-212744-8d747ae920 - scala.collection.immutable.ListSet</title>
+          <meta name="description" content="Scala Standard Library 2.12.0 - 20160519 - 212744 - 8d747ae920 - scala.collection.immutable.ListSet" />
+          <meta name="keywords" content="Scala Standard Library 2.12.0 20160519 212744 8d747ae920 scala.collection.immutable.ListSet" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -272,17 +272,15 @@ and <code>asJava</code> methods.
                           List
                         </a>
                       </li><li class="current-entities indented3">
-                        <a class="object" href="ListMap$.html" title="   This object provides a set of operations needed to create immutable.ListMap values."></a>
-                        <a class="class" href="ListMap.html" title="This class implements immutable maps using a list-based data structure, which preserves insertion order."></a>
-                        <a href="ListMap.html" title="This class implements immutable maps using a list-based data structure, which preserves insertion order.">
+                        <a class="object" href="ListMap$.html" title="   This object provides a set of operations needed to create ListMap values."></a>
+                        <a class="class" href="ListMap.html" title="This class implements immutable maps using a list-based data structure."></a>
+                        <a href="ListMap.html" title="This class implements immutable maps using a list-based data structure.">
                           ListMap
                         </a>
                       </li><li class="current-entities indented3">
-                        <a class="object" href="" title="   This object provides a set of operations needed to create immutable.ListSet values."></a>
-                        <a class="class" href="ListSet.html" title="This class implements immutable sets using a list-based data
- structure."></a>
-                        <a href="ListSet.html" title="This class implements immutable sets using a list-based data
- structure.">
+                        <a class="object" href="" title="   This object provides a set of operations needed to create ListSet values."></a>
+                        <a class="class" href="ListSet.html" title="This class implements immutable sets using a list-based data structure."></a>
+                        <a href="ListSet.html" title="This class implements immutable sets using a list-based data structure.">
                           ListSet
                         </a>
                       </li><li class="current-entities indented3">
@@ -517,8 +515,10 @@ and <code>asJava</code> methods.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>   This object provides a set of operations needed to create <code>immutable.ListSet</code> values.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/9eaecc4a4c/src/library/scala/collection/immutable/ListSet.scala#L1" target="_blank">ListSet.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>   This object provides a set of operations needed to create <code>ListSet</code> values.</p><p>Note that each element insertion takes O(n) time, which means that creating a list set with
+n elements will take O(n<sup>2</sup>) time. This makes the builder suitable only for a small number of
+elements.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8d747ae920/src/library/scala/collection/immutable/ListSet.scala#L1" target="_blank">ListSet.scala</a></dd><dt>Since</dt><dd><p>1</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -586,34 +586,6 @@ and <code>asJava</code> methods.
       </span>
       
       <p class="shortcomment cmt">The underlying collection type with unknown element type</p><div class="fullcomment"><div class="comment cmt"><p>The underlying collection type with unknown element type</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd><a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
-    </li><li name="scala.collection.immutable.ListSet.ListSetBuilder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ListSetBuilder[Elem]extendsReusableBuilder[Elem,scala.collection.immutable.ListSet[Elem]]"></a><a id="ListSetBuilder[Elem]:ListSetBuilder[Elem]"></a>
-      <span class="permalink">
-      <a href="../../../scala/collection/immutable/ListSet$.html#ListSetBuilder[Elem]extendsReusableBuilder[Elem,scala.collection.immutable.ListSet[Elem]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="A custom builder because forgetfully adding elements one at
- a time to a list backed set puts the &quot;squared&quot; in N^2.  There is a
- temporary space cost, but it's improbable a list backed set could
- become large enough for this to matter given its pricy element lookup." href="ListSet$$ListSetBuilder.html">
-              <span class="name">ListSetBuilder</span>
-            </a><span class="tparams">[<span name="Elem">Elem</span>]</span><span class="result"> extends <a href="../mutable/ReusableBuilder.html" class="extype" name="scala.collection.mutable.ReusableBuilder">ReusableBuilder</a>[<span class="extype" name="scala.collection.immutable.ListSet.ListSetBuilder.Elem">Elem</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.ListSetBuilder.Elem">Elem</span>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">A custom builder because forgetfully adding elements one at
- a time to a list backed set puts the &quot;squared&quot; in N^2.  There is a
- temporary space cost, but it's improbable a list backed set could
- become large enough for this to matter given its pricy element lookup.</p><div class="fullcomment"><div class="comment cmt"><p>A custom builder because forgetfully adding elements one at
- a time to a list backed set puts the &quot;squared&quot; in N^2.  There is a
- temporary space cost, but it's improbable a list backed set could
- become large enough for this to matter given its pricy element lookup.</p><p> This builder is reusable.
-</p></div></div>
     </li></ol>
             </div>
 
@@ -731,7 +703,7 @@ and <code>asJava</code> methods.
         <span class="name">canBuildFrom</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="../generic/CanBuildFrom.html" class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</a>[<a href="#Coll=CC[_]" class="extmbr" name="scala.collection.immutable.ListSet.Coll">Coll</a>, <span class="extype" name="scala.collection.immutable.ListSet.canBuildFrom.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.canBuildFrom.A">A</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">setCanBuildFromInfo</p>
+      <p class="shortcomment cmt">   The standard <code>CanBuildFrom</code> instance for <code>ListSet</code> objects.</p>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -908,10 +880,10 @@ and <code>asJava</code> methods.
       
       <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.collection.immutable.ListSet#newBuilder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="newBuilder[A]:scala.collection.mutable.Builder[A,scala.collection.immutable.ListSet[A]]"></a><a id="newBuilder[A]:Builder[A,ListSet[A]]"></a>
+    </li><li name="scala.collection.generic.ImmutableSetFactory#newBuilder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="newBuilder[A]:scala.collection.mutable.Builder[A,CC[A]]"></a><a id="newBuilder[A]:Builder[A,ListSet[A]]"></a>
       <span class="permalink">
-      <a href="../../../scala/collection/immutable/ListSet$.html#newBuilder[A]:scala.collection.mutable.Builder[A,scala.collection.immutable.ListSet[A]]" title="Permalink">
+      <a href="../../../scala/collection/immutable/ListSet$.html#newBuilder[A]:scala.collection.mutable.Builder[A,CC[A]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -920,10 +892,10 @@ and <code>asJava</code> methods.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">newBuilder</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.immutable.ListSet.newBuilder.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.newBuilder.A">A</span>]]</span>
+        <span class="name">newBuilder</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.generic.ImmutableSetFactory.newBuilder.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.generic.ImmutableSetFactory.newBuilder.A">A</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">The default builder for <code>immutable.ListSet</code> objects.</p><div class="fullcomment"><div class="comment cmt"><p>The default builder for <code>immutable.ListSet</code> objects.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the immutable list set's elements</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../generic/ImmutableSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSetFactory">ImmutableSetFactory</a> → <a href="../generic/GenSetFactory.html" class="extype" name="scala.collection.generic.GenSetFactory">GenSetFactory</a> → <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
+      <p class="shortcomment cmt">The default builder for <code><code>Set</code></code> objects.</p><div class="fullcomment"><div class="comment cmt"><p>The default builder for <code><code>Set</code></code> objects.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the set's elements</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/ImmutableSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSetFactory">ImmutableSetFactory</a> → <a href="../generic/GenSetFactory.html" class="extype" name="scala.collection.generic.GenSetFactory">GenSetFactory</a> → <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">

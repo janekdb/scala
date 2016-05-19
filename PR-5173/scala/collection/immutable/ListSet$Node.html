@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.0-20160517-210702-9eaecc4a4c - scala.collection.immutable.ListSet.Node</title>
-          <meta name="description" content="Scala Standard Library 2.12.0 - 20160517 - 210702 - 9eaecc4a4c - scala.collection.immutable.ListSet.Node" />
-          <meta name="keywords" content="Scala Standard Library 2.12.0 20160517 210702 9eaecc4a4c scala.collection.immutable.ListSet.Node" />
+          <title>Scala Standard Library 2.12.0-20160519-212744-8d747ae920 - scala.collection.immutable.ListSet.Node</title>
+          <meta name="description" content="Scala Standard Library 2.12.0 - 20160519 - 212744 - 8d747ae920 - scala.collection.immutable.ListSet.Node" />
+          <meta name="keywords" content="Scala Standard Library 2.12.0 20160519 212744 8d747ae920 scala.collection.immutable.ListSet.Node" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -205,18 +205,21 @@ and <code>asJava</code> methods.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This class implements immutable sets using a list-based data
- structure." href="ListSet.html">
+        <a title="This class implements immutable sets using a list-based data structure." href="ListSet.html">
               <span class="name">ListSet</span>
             </a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../AbstractSet.html" class="extype" name="scala.collection.AbstractSet">AbstractSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>] with <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>] with <a href="../generic/GenericSetTemplate.html" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>] with <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
-      <p class="shortcomment cmt">This class implements immutable sets using a list-based data
- structure.</p><div class="fullcomment"><div class="comment cmt"><p>This class implements immutable sets using a list-based data
- structure. Instances of <code>ListSet</code> represent
- empty sets; they can be either created by calling the constructor
- directly, or by applying the function <code>ListSet.empty</code>.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the elements contained in this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.collection.immutable">immutable</a></dd><dt>Version</dt><dd><p>1.0, 09/07/2003</p></dd><dt>Since</dt><dd><p>1</p></dd></dl></div>
+      <p class="shortcomment cmt">This class implements immutable sets using a list-based data structure.</p><div class="fullcomment"><div class="comment cmt"><p>This class implements immutable sets using a list-based data structure. List set iterators and
+traversal methods visit elements in the order whey were first inserted.</p><p>Elements are stored internally in reversed insertion order, which means the newest element is at
+the head of the list. As such, methods such as <code>head</code> and <code>tail</code> are O(n), while <code>last</code> and
+<code>init</code> are O(1). Other operations, such as inserting or removing entries, are also O(n), which
+makes this collection suitable only for a small number of elements.</p><p>Instances of <code>ListSet</code> represent empty sets; they can be either created by calling the
+constructor directly, or by applying the function <code>ListSet.empty</code>.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the elements contained in this list set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.collection.immutable">immutable</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Version</dt><dd><p>1.0, 09/07/2003</p></dd><dt>Since</dt><dd><p>1</p></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="" title="Represents an entry in the ListSet."></a>
@@ -258,7 +261,10 @@ and <code>asJava</code> methods.
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents an entry in the <code>ListSet</code>.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/9eaecc4a4c/src/library/scala/collection/immutable/ListSet.scala#L1" target="_blank">ListSet.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8d747ae920/src/library/scala/collection/immutable/ListSet.scala#L1" target="_blank">ListSet.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -314,9 +320,9 @@ and <code>asJava</code> methods.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="scala.collection.immutable.ListSet.Node#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(head:A):ListSet.this.Node"></a><a id="&lt;init&gt;:Node"></a>
+      <a id="&lt;init&gt;(elem:A):ListSet.this.Node"></a><a id="&lt;init&gt;:Node"></a>
       <span class="permalink">
-      <a href="../../../scala/collection/immutable/ListSet$Node.html#&lt;init&gt;(head:A):ListSet.this.Node" title="Permalink">
+      <a href="../../../scala/collection/immutable/ListSet$Node.html#&lt;init&gt;(elem:A):ListSet.this.Node" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -325,7 +331,7 @@ and <code>asJava</code> methods.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Node</span><span class="params">(<span name="head">head: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>)</span>
+        <span class="name">Node</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>)</span>
       </span>
       
       
@@ -370,7 +376,10 @@ and <code>asJava</code> methods.
       </span>
       
       <p class="shortcomment cmt">Represents an entry in the <code>ListSet</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Represents an entry in the <code>ListSet</code>.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.collection.TraversableLike.Self" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Self=Repr"></a><a id="Self:Self"></a>
       <span class="permalink">
@@ -484,7 +493,10 @@ and <code>asJava</code> methods.
         <span title="gt4s: $plus" class="name">+</span><span class="params">(<span name="e">e: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">This method creates a new set with an additional element.</p><div class="fullcomment"><div class="comment cmt"><p>This method creates a new set with an additional element.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new set that contains all elements of this set and that also
+      <p class="shortcomment cmt">Creates a new set with an additional element, unless the element is
+ already present.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new set with an additional element, unless the element is
+ already present.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new set that contains all elements of this set and that also
          contains <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a></dd></dl></div>
     </li><li name="scala.collection.SetLike#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+(elem1:A,elem2:A,elems:A*):This"></a><a id="+(A,A,A*):ListSet[A]"></a>
@@ -519,13 +531,8 @@ a: scala.collection.immutable.<span class="std">Set</span>[<span class="std">Int
         <span title="gt4s: $plus$plus" class="name">++</span><span class="params">(<span name="xs">xs: <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">If we are bulk adding elements and desire a runtime measured in
- sub-interstellar time units, we better find a way to avoid traversing
- the collection on each element.</p><div class="fullcomment"><div class="comment cmt"><p>If we are bulk adding elements and desire a runtime measured in
- sub-interstellar time units, we better find a way to avoid traversing
- the collection on each element.  That's what the custom builder does,
- so we take the easy way out and add ourselves and the argument to
- a new builder.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new immutable list set with the given elements added, omitting duplicates.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a></dd></dl></div>
+      <p class="shortcomment cmt">Creates a new list set by adding all elements contained in another collection to this list set, omitting duplicates.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new list set by adding all elements contained in another collection to this list set, omitting duplicates.</p><p>This method takes a collection of elements and adds all elements, omitting duplicates, into list set.</p><p>Example:</p><pre>scala&gt; <span class="kw">val</span> a = <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>) ++ <span class="std">Set</span>(<span class="num">2</span>, <span class="lit">"a"</span>)
+a: scala.collection.immutable.<span class="std">Set</span>[Any] = <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, a)</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new list set with the given elements added, omitting duplicates.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a></dd></dl></div>
     </li><li name="scala.collection.TraversableLike#++" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="++[B](that:scala.collection.GenTraversableOnce[B]):scala.collection.immutable.ListSet[B]"></a><a id="++[B](GenTraversableOnce[B]):ListSet[B]"></a>
       <span class="permalink">
@@ -541,9 +548,9 @@ a: scala.collection.immutable.<span class="std">Set</span>[<span class="std">Int
         <span title="gt4s: $plus$plus" class="name">++</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="scala.collection.TraversableLike.++.B">B</span>]</span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.TraversableLike.++.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Returns a new immutable list set containing the elements from the left hand operand followed by the elements from the
- right hand operand.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a new immutable list set containing the elements from the left hand operand followed by the elements from the
- right hand operand. The element type of the immutable list set is the most specific superclass encompassing
+      <p class="shortcomment cmt">[use case]  Returns a new list set containing the elements from the left hand operand followed by the elements from the
+ right hand operand.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a new list set containing the elements from the left hand operand followed by the elements from the
+ right hand operand. The element type of the list set is the most specific superclass encompassing
  the element types of the two operands.</p><p>   Example:</p><pre>scala&gt; <span class="kw">val</span> a = <span class="std">List</span>(<span class="num">1</span>)
 a: <span class="std">List</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>)
 
@@ -557,7 +564,7 @@ scala&gt; <span class="kw">val</span> d = <span class="std">List</span>(<span cl
 d: <span class="std">List</span>[<span class="std">Char</span>] = <span class="std">List</span>(a)
 
 scala&gt; <span class="kw">val</span> e = c ++ d
-e: <span class="std">List</span>[<span class="std">AnyVal</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, a)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">that</dt><dd class="cmt"><p>the traversable to append.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set which contains all elements of this immutable list set
+e: <span class="std">List</span>[<span class="std">AnyVal</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, a)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">that</dt><dd class="cmt"><p>the traversable to append.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set which contains all elements of this list set
                  followed by all elements of <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -637,7 +644,7 @@ scala&gt; <span class="kw">val</span> y = LinkedList(<span class="num">2</span>)
 y: scala.collection.mutable.LinkedList[<span class="std">Int</span>] = LinkedList(<span class="num">2</span>)
 
 scala&gt; <span class="kw">val</span> z = x ++: y
-z: scala.collection.mutable.LinkedList[<span class="std">Int</span>] = LinkedList(<span class="num">1</span>, <span class="num">2</span>)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">that</dt><dd class="cmt"><p>the traversable to append.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set which contains all elements of this immutable list set
+z: scala.collection.mutable.LinkedList[<span class="std">Int</span>] = LinkedList(<span class="num">1</span>, <span class="num">2</span>)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">that</dt><dd class="cmt"><p>the traversable to append.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set which contains all elements of this list set
                  followed by all elements of <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -668,7 +675,8 @@ z: scala.collection.mutable.LinkedList[<span class="std">Int</span>] = LinkedLis
         <span title="gt4s: $minus" class="name">-</span><span class="params">(<span name="e">e: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt"><code>-</code> can be used to remove a single element from a set.</p><div class="fullcomment"><div class="comment cmt"><p><code>-</code> can be used to remove a single element from a set.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new set that contains all elements of this set but that does not
+      <p class="shortcomment cmt">Creates a new set with a given element removed from this set.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new set with a given element removed from this set.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new set that contains all elements of this set but that does not
          contain <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../generic/Subtractable.html" class="extype" name="scala.collection.generic.Subtractable">Subtractable</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a></dd></dl></div>
     </li><li name="scala.collection.generic.Subtractable#-" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-(elem1:A,elem2:A,elems:A*):Repr"></a><a id="-(A,A,A*):ListSet[A]"></a>
@@ -1028,9 +1036,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">collect</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="pf">pf: <a href="../../PartialFunction.html" class="extype" name="scala.PartialFunction">PartialFunction</a>[<span class="extype" name="scala.collection.GenTraversableLike.A">A</span>, <span class="extype" name="scala.collection.TraversableLike.collect.B">B</span>]</span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.TraversableLike.collect.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a partial function to all elements of this immutable list set
- on which the function is defined.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a partial function to all elements of this immutable list set
- on which the function is defined.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">pf</dt><dd class="cmt"><p>the partial function which filters and maps the immutable list set.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set resulting from applying the given partial function
+      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a partial function to all elements of this list set
+ on which the function is defined.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a partial function to all elements of this list set
+ on which the function is defined.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">pf</dt><dd class="cmt"><p>the partial function which filters and maps the list set.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set resulting from applying the given partial function
                  <code>pf</code> to each element on which it is defined and collecting the results.
                  The order of the elements is preserved.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
@@ -1084,8 +1092,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">companion</span><span class="result">: <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a>[<a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">The factory companion object that builds instances of class immutable.ListSet.</p><div class="fullcomment"><div class="comment cmt"><p>The factory companion object that builds instances of class immutable.ListSet.
- (or its <code>Iterable</code> superclass where class immutable.ListSet is not a <code>Seq</code>.)
+      <p class="shortcomment cmt">The factory companion object that builds instances of class ListSet.</p><div class="fullcomment"><div class="comment cmt"><p>The factory companion object that builds instances of class ListSet.
+ (or its <code>Iterable</code> superclass where class ListSet is not a <code>Seq</code>.)
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a> → <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a> → <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a> → <a href="../Set.html" class="extype" name="scala.collection.Set">Set</a> → <a href="../GenSet.html" class="extype" name="scala.collection.GenSet">GenSet</a> → <a href="../Iterable.html" class="extype" name="scala.collection.Iterable">Iterable</a> → <a href="../GenIterable.html" class="extype" name="scala.collection.GenIterable">GenIterable</a> → <a href="../Traversable.html" class="extype" name="scala.collection.Traversable">Traversable</a> → <a href="../GenTraversable.html" class="extype" name="scala.collection.GenTraversable">GenTraversable</a> → <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
     </li><li name="scala.Function1#compose" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="compose[A](g:A=&gt;T1):A=&gt;R"></a><a id="compose[A]((A)⇒A):(A)⇒Boolean"></a>
@@ -1122,8 +1130,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">contains</span><span class="params">(<span name="e">e: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <p class="shortcomment cmt">Checks if this set contains element <code>elem</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Checks if this set contains element <code>elem</code>.
-</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p>the element to check for membership.</p></dd><dt>returns</dt><dd class="cmt"><p><code><b>true</b></code>, iff <code>elem</code> is contained in this set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a></dd></dl></div>
+      <p class="shortcomment cmt">Tests if some element is contained in this set.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if some element is contained in this set.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if <code>elem</code> is contained in this set, <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a></dd></dl></div>
     </li><li name="scala.collection.IterableLike#copyToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copyToArray(xs:Array[A],start:Int,len:Int):Unit"></a><a id="copyToArray(Array[A],Int,Int):Unit"></a>
       <span class="permalink">
@@ -1139,10 +1147,10 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">copyToArray</span><span class="params">(<span name="xs">xs: <a href="../../Array.html" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>]</span>, <span name="start">start: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="len">len: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Copies the elements of this immutable list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this immutable list set to an array.
+      <p class="shortcomment cmt">[use case]  Copies the elements of this list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this list set to an array.
  Fills the given array <code>xs</code> with at most <code>len</code> elements of
- this immutable list set, starting at position <code>start</code>.
- Copying will stop once either the end of the current immutable list set is reached,
+ this list set, starting at position <code>start</code>.
+ Copying will stop once either the end of the current list set is reached,
  or the end of the target array is reached, or <code>len</code> elements have been copied.</p></div><dl class="paramcmts block"><dt class="param">xs</dt><dd class="cmt"><p>the array to fill.</p></dd><dt class="param">start</dt><dd class="cmt"><p>the starting index.</p></dd><dt class="param">len</dt><dd class="cmt"><p>the maximal number of elements to copy.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -1173,9 +1181,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">copyToArray</span><span class="params">(<span name="xs">xs: <a href="../../Array.html" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>]</span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Copies the elements of this immutable list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this immutable list set to an array.
- Fills the given array <code>xs</code> with values of this immutable list set.
- Copying will stop once either the end of the current immutable list set is reached,
+      <p class="shortcomment cmt">[use case]  Copies the elements of this list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this list set to an array.
+ Fills the given array <code>xs</code> with values of this list set.
+ Copying will stop once either the end of the current list set is reached,
  or the end of the target array is reached.</p></div><dl class="paramcmts block"><dt class="param">xs</dt><dd class="cmt"><p>the array to fill.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -1206,9 +1214,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">copyToArray</span><span class="params">(<span name="xs">xs: <a href="../../Array.html" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>]</span>, <span name="start">start: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Copies the elements of this immutable list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this immutable list set to an array.
- Fills the given array <code>xs</code> with values of this immutable list set, beginning at index <code>start</code>.
- Copying will stop once either the end of the current immutable list set is reached,
+      <p class="shortcomment cmt">[use case]  Copies the elements of this list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Copies the elements of this list set to an array.
+ Fills the given array <code>xs</code> with values of this list set, beginning at index <code>start</code>.
+ Copying will stop once either the end of the current list set is reached,
  or the end of the target array is reached.</p></div><dl class="paramcmts block"><dt class="param">xs</dt><dd class="cmt"><p>the array to fill.</p></dd><dt class="param">start</dt><dd class="cmt"><p>the starting index.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -1330,6 +1338,22 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       <p class="shortcomment cmt">Drops longest prefix of elements that satisfy a predicate.</p><div class="fullcomment"><div class="comment cmt"><p>Drops longest prefix of elements that satisfy a predicate.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the longest suffix of this traversable collection whose first element
           does not satisfy the predicate <code>p</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd></dl></div>
+    </li><li name="scala.collection.immutable.ListSet.Node#elem" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="elem:A"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/ListSet$Node.html#elem:A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">elem</span><span class="result">: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a></dd></dl></div>
     </li><li name="scala.collection.generic.GenericSetTemplate#empty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="empty:CC[A]"></a><a id="empty:ListSet[A]"></a>
       <span class="permalink">
@@ -1582,9 +1606,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">flatMap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.GenTraversableLike.A">A</span>) ⇒ <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="scala.collection.TraversableLike.flatMap.B">B</span>]</span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.TraversableLike.flatMap.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a function to all elements of this immutable list set
- and using the elements of the resulting collections.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a function to all elements of this immutable list set
- and using the elements of the resulting collections.</p><p>   For example:</p><pre><span class="kw">def</span> getWords(lines: <span class="std">Seq</span>[<span class="std">String</span>]): <span class="std">Seq</span>[<span class="std">String</span>] = lines flatMap (line <span class="kw">=&gt;</span> line split <span class="lit">"\\W+"</span>)</pre><p>   The type of the resulting collection is guided by the static type of immutable list set. This might
+      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a function to all elements of this list set
+ and using the elements of the resulting collections.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a function to all elements of this list set
+ and using the elements of the resulting collections.</p><p>   For example:</p><pre><span class="kw">def</span> getWords(lines: <span class="std">Seq</span>[<span class="std">String</span>]): <span class="std">Seq</span>[<span class="std">String</span>] = lines flatMap (line <span class="kw">=&gt;</span> line split <span class="lit">"\\W+"</span>)</pre><p>   The type of the resulting collection is guided by the static type of list set. This might
    cause unexpected results sometimes. For example:</p><pre><span class="cmt">// lettersOf will return a Seq[Char] of likely repeated letters, instead of a Set</span>
 <span class="kw">def</span> lettersOf(words: <span class="std">Seq</span>[<span class="std">String</span>]) = words flatMap (word <span class="kw">=&gt;</span> word.toSet)
 
@@ -1595,8 +1619,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
 <span class="kw">val</span> xs = <span class="std">Map</span>(<span class="lit">"a"</span> -&gt; <span class="std">List</span>(<span class="num">11</span>,<span class="num">111</span>), <span class="lit">"b"</span> -&gt; <span class="std">List</span>(<span class="num">22</span>,<span class="num">222</span>)).flatMap(_._2)
 
 <span class="cmt">// ys will be a Map[Int, Int]</span>
-<span class="kw">val</span> ys = <span class="std">Map</span>(<span class="lit">"a"</span> -&gt; <span class="std">List</span>(<span class="num">1</span> -&gt; <span class="num">11</span>,<span class="num">1</span> -&gt; <span class="num">111</span>), <span class="lit">"b"</span> -&gt; <span class="std">List</span>(<span class="num">2</span> -&gt; <span class="num">22</span>,<span class="num">2</span> -&gt; <span class="num">222</span>)).flatMap(_._2)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function to apply to each element.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set resulting from applying the given collection-valued function
-                 <code>f</code> to each element of this immutable list set and concatenating the results.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../generic/FilterMonadic.html" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a></dd><div class="full-signature-block toggleContainer">
+<span class="kw">val</span> ys = <span class="std">Map</span>(<span class="lit">"a"</span> -&gt; <span class="std">List</span>(<span class="num">1</span> -&gt; <span class="num">11</span>,<span class="num">1</span> -&gt; <span class="num">111</span>), <span class="lit">"b"</span> -&gt; <span class="std">List</span>(<span class="num">2</span> -&gt; <span class="num">22</span>,<span class="num">2</span> -&gt; <span class="num">222</span>)).flatMap(_._2)</pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function to apply to each element.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set resulting from applying the given collection-valued function
+                 <code>f</code> to each element of this list set and concatenating the results.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../generic/FilterMonadic.html" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -1626,12 +1650,12 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">flatten</span><span class="tparams">[<span name="B">B</span>]</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.flatten.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]     Converts this immutable list set of traversable collections into
- a immutable list set formed by the elements of these traversable
- collections.</p><div class="fullcomment">[use case] <div class="comment cmt"><p>    Converts this immutable list set of traversable collections into
- a immutable list set formed by the elements of these traversable
+      <p class="shortcomment cmt">[use case]     Converts this list set of traversable collections into
+ a list set formed by the elements of these traversable
+ collections.</p><div class="fullcomment">[use case] <div class="comment cmt"><p>    Converts this list set of traversable collections into
+ a list set formed by the elements of these traversable
  collections.</p><p>   The resulting collection's type will be guided by the
-   static type of immutable list set. For example:</p><pre><span class="kw">val</span> xs = <span class="std">List</span>(
+   static type of list set. For example:</p><pre><span class="kw">val</span> xs = <span class="std">List</span>(
            <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>),
            <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>)
          ).flatten
@@ -1641,7 +1665,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
            <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>),
            <span class="std">List</span>(<span class="num">3</span>, <span class="num">2</span>, <span class="num">1</span>)
          ).flatten
-<span class="cmt">// ys == Set(1, 2, 3)</span></pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the elements of each traversable collection.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set resulting from concatenating all element immutable list sets.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><div class="full-signature-block toggleContainer">
+<span class="cmt">// ys == Set(1, 2, 3)</span></pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the elements of each traversable collection.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set resulting from concatenating all element list sets.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -1756,7 +1780,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">foreach</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>) ⇒ <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Applies a function <code>f</code> to all elements of this immutable list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Applies a function <code>f</code> to all elements of this immutable list set.</p><p>   Note: this method underlies the implementation of most other bulk operations.
+      <p class="shortcomment cmt">[use case]  Applies a function <code>f</code> to all elements of this list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Applies a function <code>f</code> to all elements of this list set.</p><p>   Note: this method underlies the implementation of most other bulk operations.
    Subclasses should re-implement this method if a more efficient implementation exists.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>the function that is applied for its side-effect to every element.
              The result of function <code>f</code> is discarded.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a> → <a href="../generic/FilterMonadic.html" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
@@ -1917,7 +1941,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       
       <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a> → AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
-    </li><li name="scala.collection.immutable.ListSet.Node#head" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.collection.IterableLike#head" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="head:A"></a>
       <span class="permalink">
       <a href="../../../scala/collection/immutable/ListSet$Node.html#head:A" title="Permalink">
@@ -1926,13 +1950,14 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">head</span><span class="result">: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first element of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+      <p class="shortcomment cmt">Selects the first element of this iterable collection.</p><div class="fullcomment"><div class="comment cmt"><p>Selects the first element of this iterable collection.</p><p>   Note: might return different results for different runs, unless the
+   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first element of this iterable collection.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#NoSuchElementException=java.util.NoSuchElementException" class="extmbr" name="scala.NoSuchElementException"><code>NoSuchElementException</code></a> if the iterable collection is empty.</p></span></dd></dl></div>
     </li><li name="scala.collection.TraversableLike#headOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="headOption:Option[A]"></a>
       <span class="permalink">
@@ -1951,10 +1976,10 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       <p class="shortcomment cmt">Optionally selects the first element.</p><div class="fullcomment"><div class="comment cmt"><p>Optionally selects the first element.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first element of this traversable collection if it is nonempty,
           <code>None</code> if it is empty.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd></dl></div>
-    </li><li name="scala.collection.TraversableLike#init" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="init:Repr"></a><a id="init:ListSet[A]"></a>
+    </li><li name="scala.collection.immutable.ListSet.Node#init" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init:scala.collection.immutable.ListSet[A]"></a><a id="init:ListSet[A]"></a>
       <span class="permalink">
-      <a href="../../../scala/collection/immutable/ListSet$Node.html#init:Repr" title="Permalink">
+      <a href="../../../scala/collection/immutable/ListSet$Node.html#init:scala.collection.immutable.ListSet[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1967,8 +1992,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       </span>
       
       <p class="shortcomment cmt">Selects all elements except the last.</p><div class="fullcomment"><div class="comment cmt"><p>Selects all elements except the last.</p><p>   Note: might return different results for different runs, unless the
-   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a traversable collection consisting of all elements of this traversable collection
-          except the last one.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#UnsupportedOperationException=UnsupportedOperationException" class="extmbr" name="scala.UnsupportedOperationException"><code>UnsupportedOperationException</code></a> if the traversable collection is empty.</p></span></dd></dl></div>
+   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a list set consisting of all elements of this list set
+          except the last one.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#UnsupportedOperationException=UnsupportedOperationException" class="extmbr" name="scala.UnsupportedOperationException"><code>UnsupportedOperationException</code></a> if the list set is empty.</p></span></dd></dl></div>
     </li><li name="scala.collection.TraversableLike#inits" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="inits:Iterator[Repr]"></a><a id="inits:Iterator[ListSet[A]]"></a>
       <span class="permalink">
@@ -2023,8 +2048,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">isEmpty</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <p class="shortcomment cmt">Checks if this set is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Checks if this set is empty.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true, iff there is no element in the set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
+      <p class="shortcomment cmt">Tests if this set is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if this set is empty.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if there is no element in the set, <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -2077,9 +2102,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">iterator</span><span class="result">: <a href="../Iterator.html" class="extype" name="scala.collection.Iterator">Iterator</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Creates a new iterator over all elements contained in this set.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new iterator over all elements contained in this set.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the new iterator</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a> → <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
-    </li><li name="scala.collection.TraversableLike#last" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Creates a new iterator over all elements contained in this iterable object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new iterator over all elements contained in this iterable object.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the new iterator</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../GenSetLike.html" class="extype" name="scala.collection.GenSetLike">GenSetLike</a> → <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd></dl></div>
+    </li><li name="scala.collection.immutable.ListSet.Node#last" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="last:A"></a>
       <span class="permalink">
       <a href="../../../scala/collection/immutable/ListSet$Node.html#last:A" title="Permalink">
@@ -2095,7 +2120,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       </span>
       
       <p class="shortcomment cmt">Selects the last element.</p><div class="fullcomment"><div class="comment cmt"><p>Selects the last element.</p><p>   Note: might return different results for different runs, unless the
-   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The last element of this traversable collection.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#NoSuchElementException=java.util.NoSuchElementException" class="extmbr" name="scala.NoSuchElementException"><code>NoSuchElementException</code></a> If the traversable collection is empty.</p></span></dd></dl></div>
+   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The last element of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#NoSuchElementException=java.util.NoSuchElementException" class="extmbr" name="scala.NoSuchElementException"><code>NoSuchElementException</code></a> If the list set is empty.</p></span></dd></dl></div>
     </li><li name="scala.collection.TraversableLike#lastOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lastOption:Option[A]"></a>
       <span class="permalink">
@@ -2129,8 +2154,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.GenTraversableLike.A">A</span>) ⇒ <span class="extype" name="scala.collection.SetLike.map.B">B</span></span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.SetLike.map.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a function to all elements of this immutable list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a function to all elements of this immutable list set.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function to apply to each element.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set resulting from applying the given function
-                 <code>f</code> to each element of this immutable list set and collecting the results.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../generic/FilterMonadic.html" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Builds a new collection by applying a function to all elements of this list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Builds a new collection by applying a function to all elements of this list set.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the element type of the returned collection.</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function to apply to each element.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set resulting from applying the given function
+                 <code>f</code> to each element of this list set and collecting the results.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../generic/FilterMonadic.html" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -2160,7 +2185,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">max</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Finds the largest element.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the largest element.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the largest element of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Finds the largest element.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the largest element.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the largest element of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -2190,7 +2215,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">maxBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Finds the first element which yields the largest value measured by function f.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the first element which yields the largest value measured by function f.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>The result type of the function f.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The measuring function.</p></dd><dt>returns</dt><dd class="cmt"><p>the first element of this immutable list set with the largest value measured by function f.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Finds the first element which yields the largest value measured by function f.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the first element which yields the largest value measured by function f.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>The result type of the function f.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The measuring function.</p></dd><dt>returns</dt><dd class="cmt"><p>the first element of this list set with the largest value measured by function f.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -2220,7 +2245,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">min</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Finds the smallest element.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the smallest element.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the smallest element of this immutable list set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Finds the smallest element.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the smallest element.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the smallest element of this list set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -2250,7 +2275,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">minBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Finds the first element which yields the smallest value measured by function f.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the first element which yields the smallest value measured by function f.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>The result type of the function f.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The measuring function.</p></dd><dt>returns</dt><dd class="cmt"><p>the first element of this immutable list set with the smallest value measured by function f.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Finds the first element which yields the smallest value measured by function f.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Finds the first element which yields the smallest value measured by function f.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>The result type of the function f.</p></dd><dt class="param">f</dt><dd class="cmt"><p>The measuring function.</p></dd><dt>returns</dt><dd class="cmt"><p>the first element of this list set with the smallest value measured by function f.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -2369,6 +2394,22 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
  <a href="mutable/SetLike.html" target="ContentFrame">
  `mutable.SetLike`</a>.
 </p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd><a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../generic/HasNewBuilder.html" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a></dd></dl></div>
+    </li><li name="scala.collection.immutable.ListSet.Node#next" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="next:scala.collection.immutable.ListSet[A]"></a><a id="next:ListSet[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/ListSet$Node.html#next:scala.collection.immutable.ListSet[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">next</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a></dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#nonEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nonEmpty:Boolean"></a>
       <span class="permalink">
@@ -2496,9 +2537,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">product</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Multiplies up the elements of this collection.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Multiplies up the elements of this collection.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the product of all elements in this immutable list set of numbers of type <code>Int</code>.
+      <p class="shortcomment cmt">[use case]  Multiplies up the elements of this collection.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Multiplies up the elements of this collection.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the product of all elements in this list set of numbers of type <code>Int</code>.
     Instead of <code>Int</code>, any other type <code>T</code> with an implicit <code>Numeric[T]</code> implementation
-    can be used as element type of the immutable list set and as result type of <code>product</code>.
+    can be used as element type of the list set and as result type of <code>product</code>.
     Examples of such types are: <code>Long</code>, <code>Float</code>, <code>Double</code>, <code>BigInt</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -2688,7 +2729,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">sameElements</span><span class="params">(<span name="that">that: <a href="../GenIterable.html" class="extype" name="scala.collection.GenIterable">GenIterable</a>[<span class="extype" name="scala.collection.GenIterableLike.A">A</span>]</span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Checks if the other iterable collection contains the same elements in the same order as this immutable list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Checks if the other iterable collection contains the same elements in the same order as this immutable list set.</p><p>   Note: might return different results for different runs, unless the
+      <p class="shortcomment cmt">[use case]  Checks if the other iterable collection contains the same elements in the same order as this list set.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Checks if the other iterable collection contains the same elements in the same order as this list set.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>the collection to compare with.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code>, if both collections contain the same elements in the same order, <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -2802,8 +2843,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">size</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <p class="shortcomment cmt">Returns the number of elements in this set.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the number of elements in this set.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>number of set elements.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
+      <p class="shortcomment cmt">The size of this list set.</p><div class="fullcomment"><div class="comment cmt"><p>The size of this list set.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the number of elements in this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
     </li><li name="scala.collection.IterableLike#slice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="slice(from:Int,until:Int):Repr"></a><a id="slice(Int,Int):ListSet[A]"></a>
       <span class="permalink">
@@ -2995,9 +3035,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">sum</span><span class="result">: <span class="extype" name="scala.collection.GenTraversableOnce.A">A</span></span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Sums up the elements of this collection.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Sums up the elements of this collection.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the sum of all elements in this immutable list set of numbers of type <code>Int</code>.
+      <p class="shortcomment cmt">[use case]  Sums up the elements of this collection.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Sums up the elements of this collection.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the sum of all elements in this list set of numbers of type <code>Int</code>.
     Instead of <code>Int</code>, any other type <code>T</code> with an implicit <code>Numeric[T]</code> implementation
-    can be used as element type of the immutable list set and as result type of <code>sum</code>.
+    can be used as element type of the list set and as result type of <code>sum</code>.
     Examples of such types are: <code>Long</code>, <code>Float</code>, <code>Double</code>, <code>BigInt</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
@@ -3029,10 +3069,10 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.collection.immutable.ListSet.Node#tail" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tail:scala.collection.immutable.ListSet[A]"></a><a id="tail:ListSet[A]"></a>
+    </li><li name="scala.collection.TraversableLike#tail" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tail:Repr"></a><a id="tail:ListSet[A]"></a>
       <span class="permalink">
-      <a href="../../../scala/collection/immutable/ListSet$Node.html#tail:scala.collection.immutable.ListSet[A]" title="Permalink">
+      <a href="../../../scala/collection/immutable/ListSet$Node.html#tail:Repr" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -3044,8 +3084,9 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">tail</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a immutable list set consisting of all elements of this immutable list set
-          except the first one.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a> → <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+      <p class="shortcomment cmt">Selects all elements except the first.</p><div class="fullcomment"><div class="comment cmt"><p>Selects all elements except the first.</p><p>   Note: might return different results for different runs, unless the
+   underlying collection type is ordered.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a traversable collection consisting of all elements of this traversable collection
+          except the first one.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../GenTraversableLike.html" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="`UnsupportedOperationException`"><code>`UnsupportedOperationException`</code></span> if the traversable collection is empty.</p></span></dd></dl></div>
     </li><li name="scala.collection.TraversableLike#tails" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tails:Iterator[Repr]"></a><a id="tails:Iterator[ListSet[A]]"></a>
       <span class="permalink">
@@ -3156,7 +3197,7 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">to</span><span class="tparams">[<span name="Col">Col<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result">: <span class="extype" name="scala.collection.TraversableLike.to.Col">Col</span>[<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Converts this immutable list set into another by copying all elements.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this immutable list set into another by copying all elements.</p></div><dl class="paramcmts block"><dt class="tparam">Col</dt><dd class="cmt"><p>The collection type to build.</p></dd><dt>returns</dt><dd class="cmt"><p>a new collection containing all elements of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Converts this list set into another by copying all elements.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this list set into another by copying all elements.</p></div><dl class="paramcmts block"><dt class="tparam">Col</dt><dd class="cmt"><p>The collection type to build.</p></dd><dt>returns</dt><dd class="cmt"><p>a new collection containing all elements of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -3186,8 +3227,8 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">toArray</span><span class="result">: <a href="../../Array.html" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.collection.GenTraversableOnce.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Converts this immutable list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this immutable list set to an array.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an array containing all elements of this immutable list set.
-            An <code>ClassTag</code> must be available for the element type of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+      <p class="shortcomment cmt">[use case]  Converts this list set to an array.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this list set to an array.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an array containing all elements of this list set.
+            An <code>ClassTag</code> must be available for the element type of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -3328,12 +3369,12 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">toMap</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="result">: <a href="../Map.html" class="extype" name="scala.collection.Map">collection.Map</a>[<span class="extype" name="scala.collection.TraversableOnce.toMap.T">T</span>, <span class="extype" name="scala.collection.TraversableOnce.toMap.U">U</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Converts this immutable list set to a map.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this immutable list set to a map.  This method is unavailable unless
+      <p class="shortcomment cmt">[use case]  Converts this list set to a map.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Converts this list set to a map.  This method is unavailable unless
  the elements are members of Tuple2, each ((T, U)) becoming a key-value
  pair in the map.  Duplicate keys will be overwritten by later keys:
  if this is an unordered collection, which key is in the resulting map
  is undefined.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a map of type <code>immutable.Map[T, U]</code>
-              containing all key/value pairs of type <code>(T, U)</code> of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
+              containing all key/value pairs of type <code>(T, U)</code> of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -3401,14 +3442,14 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">toSet</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.collection.immutable.ListSet.A">A</span></span>]</span><span class="result">: <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.ListSet.toSet.B">B</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Returns this immutable list set as an immutable set, perhaps accepting a
- wider range of elements.</p><div class="fullcomment"><div class="comment cmt"><p>Returns this immutable list set as an immutable set, perhaps accepting a
+      <p class="shortcomment cmt">Returns this list set as an immutable set, perhaps accepting a
+ wider range of elements.</p><div class="fullcomment"><div class="comment cmt"><p>Returns this list set as an immutable set, perhaps accepting a
  wider range of elements.  Since it already is an
  immutable set, it will only be rebuilt if the underlying structure
  cannot be expanded to include arbitrary element types.
  For instance, <code>BitSet</code> and <code>SortedSet</code> will be rebuilt, as
  they require <code>Int</code> and sortable elements respectively.</p><p> When in doubt, the set will be rebuilt.  Rebuilt sets never
- need to be rebuilt again.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a set containing all elements of this immutable list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
+ need to be rebuilt again.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a set containing all elements of this list set.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a> → <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a> → <a href="../TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a> → <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a></dd></dl></div>
     </li><li name="scala.collection.IterableLike#toStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toStream:scala.collection.immutable.Stream[A]"></a><a id="toStream:Stream[A]"></a>
       <span class="permalink">
@@ -3738,14 +3779,14 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">zip</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <a href="../GenIterable.html" class="extype" name="scala.collection.GenIterable">GenIterable</a>[<span class="extype" name="scala.collection.IterableLike.zip.B">B</span>]</span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[(<span class="extype" name="scala.collection.GenIterableLike.A">A</span>, <span class="extype" name="scala.collection.IterableLike.zip.B">B</span>)]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Returns a immutable list set formed from this immutable list set and another iterable collection
- by combining corresponding elements in pairs.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a immutable list set formed from this immutable list set and another iterable collection
+      <p class="shortcomment cmt">[use case]  Returns a list set formed from this list set and another iterable collection
+ by combining corresponding elements in pairs.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a list set formed from this list set and another iterable collection
  by combining corresponding elements in pairs.
  If one of the two collections is longer than the other, its remaining elements are ignored.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.
-</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the second half of the returned pairs</p></dd><dt class="param">that</dt><dd class="cmt"><p>The iterable providing the second half of each result pair</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set containing pairs consisting of
-                  corresponding elements of this immutable list set and <code>that</code>. The length
-                  of the returned collection is the minimum of the lengths of this immutable list set and <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
+</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the second half of the returned pairs</p></dd><dt class="param">that</dt><dd class="cmt"><p>The iterable providing the second half of each result pair</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set containing pairs consisting of
+                  corresponding elements of this list set and <code>that</code>. The length
+                  of the returned collection is the minimum of the lengths of this list set and <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -3775,17 +3816,17 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">zipAll</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <a href="../Iterable.html" class="extype" name="scala.collection.Iterable">collection.Iterable</a>[<span class="extype" name="scala.collection.IterableLike.zipAll.B">B</span>]</span>, <span name="thisElem">thisElem: <span class="extype" name="scala.collection.GenIterableLike.A">A</span></span>, <span name="thatElem">thatElem: <span class="extype" name="scala.collection.IterableLike.zipAll.B">B</span></span>)</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[(<span class="extype" name="scala.collection.GenIterableLike.A">A</span>, <span class="extype" name="scala.collection.IterableLike.zipAll.B">B</span>)]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Returns a immutable list set formed from this immutable list set and another iterable collection
- by combining corresponding elements in pairs.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a immutable list set formed from this immutable list set and another iterable collection
+      <p class="shortcomment cmt">[use case]  Returns a list set formed from this list set and another iterable collection
+ by combining corresponding elements in pairs.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Returns a list set formed from this list set and another iterable collection
  by combining corresponding elements in pairs.
  If one of the two collections is shorter than the other,
  placeholder elements are used to extend the shorter collection to the length of the longer.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.
-</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the second half of the returned pairs</p></dd><dt class="param">that</dt><dd class="cmt"><p>The iterable providing the second half of each result pair</p></dd><dt class="param">thisElem</dt><dd class="cmt"><p>the element to be used to fill up the result if this immutable list set is shorter than <code>that</code>.</p></dd><dt class="param">thatElem</dt><dd class="cmt"><p>the element to be used to fill up the result if <code>that</code> is shorter than this immutable list set.</p></dd><dt>returns</dt><dd class="cmt"><p>a new immutable list set containing pairs consisting of
-                  corresponding elements of this immutable list set and <code>that</code>. The length
-                  of the returned collection is the maximum of the lengths of this immutable list set and <code>that</code>.
-                  If this immutable list set is shorter than <code>that</code>, <code>thisElem</code> values are used to pad the result.
-                  If <code>that</code> is shorter than this immutable list set, <code>thatElem</code> values are used to pad the result.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
+</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the second half of the returned pairs</p></dd><dt class="param">that</dt><dd class="cmt"><p>The iterable providing the second half of each result pair</p></dd><dt class="param">thisElem</dt><dd class="cmt"><p>the element to be used to fill up the result if this list set is shorter than <code>that</code>.</p></dd><dt class="param">thatElem</dt><dd class="cmt"><p>the element to be used to fill up the result if <code>that</code> is shorter than this list set.</p></dd><dt>returns</dt><dd class="cmt"><p>a new list set containing pairs consisting of
+                  corresponding elements of this list set and <code>that</code>. The length
+                  of the returned collection is the maximum of the lengths of this list set and <code>that</code>.
+                  If this list set is shorter than <code>that</code>, <code>thisElem</code> values are used to pad the result.
+                  If <code>that</code> is shorter than this list set, <code>thatElem</code> values are used to pad the result.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature
@@ -3815,10 +3856,10 @@ res5: StringBuilder = <span class="std">List</span>(<span class="num">1</span>, 
         <span class="name">zipWithIndex</span><span class="result">: <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[(<span class="extype" name="scala.collection.GenIterableLike.A">A</span>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>)]</span>
       </span>
       
-      <p class="shortcomment cmt">[use case]  Zips this immutable list set with its indices.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Zips this immutable list set with its indices.</p><p>   Note: might return different results for different runs, unless the
+      <p class="shortcomment cmt">[use case]  Zips this list set with its indices.</p><div class="fullcomment">[use case] <div class="comment cmt"><p> Zips this list set with its indices.</p><p>   Note: might return different results for different runs, unless the
    underlying collection type is ordered.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new immutable list set containing pairs consisting of all elements of this
-                  immutable list set paired with their index. Indices start at <code>0</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new list set containing pairs consisting of all elements of this
+                  list set paired with their index. Indices start at <code>0</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a> → <a href="../GenIterableLike.html" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a></dd><div class="full-signature-block toggleContainer">
             <span class="toggle">
               <i class="material-icons"></i>
               Full Signature

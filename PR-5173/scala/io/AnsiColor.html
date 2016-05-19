@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.0-20160517-210702-9eaecc4a4c - scala.io.AnsiColor</title>
-          <meta name="description" content="Scala Standard Library 2.12.0 - 20160517 - 210702 - 9eaecc4a4c - scala.io.AnsiColor" />
-          <meta name="keywords" content="Scala Standard Library 2.12.0 20160517 210702 9eaecc4a4c scala.io.AnsiColor" />
+          <title>Scala Standard Library 2.12.0-20160519-212744-8d747ae920 - scala.io.AnsiColor</title>
+          <meta name="description" content="Scala Standard Library 2.12.0 - 20160519 - 212744 - 8d747ae920 - scala.io.AnsiColor" />
+          <meta name="keywords" content="Scala Standard Library 2.12.0 20160519 212744 8d747ae920 scala.io.AnsiColor" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -202,12 +202,12 @@ imports.</p><p>Notable packages include:</p><ul><li><a href="../collection/index
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>ANSI escape codes providing control over text formatting and color on supporting text terminals.</p><h4>ANSI Style and Control Codes</h4><p>This group of escape codes provides control over text styling. For example turn on reverse video with bold and
-then turn off all styling,</p><pre><span class="kw">import</span> io.AnsiColor._
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>ANSI escape codes providing control over text formatting and color on supporting text terminals.</p><h4>ANSI Style and Control Codes</h4><p>This group of escape codes provides control over text styling. For example, to turn on reverse video with bold and
+then turn off all styling embed these codes,</p><pre><span class="kw">import</span> io.AnsiColor._
 
 <span class="kw">object</span> ColorDemo <span class="kw">extends</span> <span class="std">App</span> {
 
-  println(s<span class="lit">"${REVERSED}${BOLD}Hello 1979!${RESET}"</span>)
+  println(s<span class="lit">"$REVERSED${BOLD}Hello 1979!$RESET"</span>)
 }</pre><h4>Foreground and Background Colors</h4><p>Embedding ANSI color codes in text output will control the text foreground and background colors.</p><p><table>
   <tr><th style="padding:4px 15px;text-decoration:underline">Foreground</th><th style="width:50%"></th><th style="padding:4px 15px;text-decoration:underline">Background</th></tr>
   <tr><td style="padding:4px 15px">BLACK  </td><td style="background-color:#000"></td><td style="padding:4px 15px">BLACK_B  </td></tr>
@@ -219,7 +219,7 @@ then turn off all styling,</p><pre><span class="kw">import</span> io.AnsiColor._
   <tr><td style="padding:4px 15px">CYAN   </td><td style="background-color:#0ff"></td><td style="padding:4px 15px">CYAN_B   </td></tr>
   <tr><td style="padding:4px 15px">WHITE  </td><td style="background-color:#fff"></td><td style="padding:4px 15px">WHITE_B  </td></tr>
 </table>
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/9eaecc4a4c/src/library/scala/io/AnsiColor.scala#L1" target="_blank">AnsiColor.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8d747ae920/src/library/scala/io/AnsiColor.scala#L1" target="_blank">AnsiColor.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
