@@ -1,0 +1,49 @@
+newSource:3: warning: unclosed table
+  /**
+  ^
+newSource:9: warning: more than one table caption
+  /**
+  ^
+newSource:17: warning: table caption defined after table header
+  /**
+  ^
+newSource:25: warning: table caption defined after table cells
+  /**
+  ^
+newSource:33: warning: more than one table header
+  /**
+  ^
+newSource:41: warning: table header defined after table cells
+  /**
+  ^
+newSource:49: warning: table header cell count not equal to first row cell count: header: 2, row: 1
+  /**
+  ^
+newSource:57: warning: table rows had different cell counts: [1,3,2]
+  /**
+  ^
+newSource:57: warning: Row 1: Cell count: 1: [cell 1: Paragraph(Text(a))]
+  /**
+  ^
+newSource:57: warning: Row 2: Cell count: 3: [cell 1: Paragraph(Text(b1))], [cell 2: Paragraph(Text(b2a)), Paragraph(Text(b2b))], [cell 3: Paragraph(Text(b3))]
+  /**
+  ^
+newSource:57: warning: Row 3: Cell count: 2: [cell 1: Paragraph(Text(c1))], [cell 2: Paragraph(Text(c2))]
+  /**
+  ^
+newSource:68: warning: unclosed table row
+  /**
+  ^
+newSource:68: warning: unclosed table
+  /**
+  ^
+newSource:73: warning: unclosed table
+  /**
+  ^
+newSource:73: warning: no additional content on same line after table
+  /**
+  ^
+newSource:81: warning: unclosed table
+  /**
+  ^
+Done.

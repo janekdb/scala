@@ -1,5 +1,5 @@
 /* NSC -- new Scala compiler
- * Copyright 2007-2013 LAMP/EPFL
+ * Copyright 2007-2018 LAMP/EPFL
  * @author  Manohar Jonnalagedda
  */
 
@@ -55,6 +55,10 @@ final case class UnorderedList(items: Seq[Block]) extends Block
 final case class OrderedList(items: Seq[Block], style: String) extends Block
 final case class DefinitionList(items: SortedMap[Inline, Block]) extends Block
 final case class HorizontalRule() extends Block
+final case class Table(header: Option[Row], caption: Option[Caption], rows: Seq[Row]) extends Block
+final case class Caption(blocks: Seq[Block])
+final case class Row(cells: Seq[Cell])
+final case class Cell(blocks: Seq[Block])
 
 /** An section of text inside a block, possibly with formatting. */
 sealed abstract class Inline

@@ -104,6 +104,7 @@ abstract class HtmlPage extends Page { thisPage =>
       <dl>{items map { case (t, d) => <dt>{ inlineToHtml(t) }</dt><dd>{ blockToHtml(d) }</dd> } }</dl>
     case HorizontalRule() =>
       <hr/>
+    case tbl: Table => tableToHtml(tbl)
   }
 
   def listItemsToHtml(items: Seq[Block]) =
@@ -156,6 +157,25 @@ abstract class HtmlPage extends Page { thisPage =>
         <span class="extype" name={ dtpl.qualifiedName }>{ inlineToHtml(text) }</span>
     case _ =>
       inlineToHtml(text)
+  }
+
+  private def tableToHtml(table: Table): NodeSeq = {
+
+    val Table(header, caption, rows) = table
+
+    <table class="doctbl">
+      {if(caption.isDefined) <caption>{ caption.get.blocks.map(blockToHtml) }</caption> }
+      {
+      header.toList.map {
+        row => <tr>{ row.cells.map(cell => <th>{ cell.blocks.map(blockToHtml) }</th>) }</tr>
+      }
+      }
+      {
+      rows.map {
+        row => <tr>{ row.cells.map(cell => <td>{ cell.blocks.map(blockToHtml) }</td>) }</tr>
+      }
+      }
+    </table>
   }
 
   def typeToHtml(tpes: List[model.TypeEntity], hasLinks: Boolean): NodeSeq = tpes match {
